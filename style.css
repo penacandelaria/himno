@@ -4,50 +4,118 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #fdf7f3;
-  color: #1a1a1a;
+  background: #ade0ec;
+  color: #111111;
+  font-family: "gill-sans-nova", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
 }
 
-.container {
-  max-width: 680px;
+.site {
+  width: 100%;
+  padding: 48px 24px 64px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12px;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-family: "modesto-open-inline-fill", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(3.4rem, 10vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.content {
+  width: 100%;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 60px 20px;
 }
 
-.hero h1 {
-  font-size: 48px;
+.kicker {
+  font-family: "gill-sans-nova", sans-serif;
   font-weight: 500;
-  margin-bottom: 10px;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 28px;
 }
 
-.tagline {
-  font-size: 18px;
-  opacity: 0.7;
-  margin-bottom: 40px;
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 42px;
 }
 
-.about {
-  margin-bottom: 40px;
-  line-height: 1.6;
+.text-block p {
+  font-family: "gill-sans-nova", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  max-width: 32rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 28px;
 }
 
 .links a {
-  display: inline-block;
-  margin-right: 20px;
+  color: #111111;
   text-decoration: none;
-  color: inherit;
-  border-bottom: 1px solid #1a1a1a;
+  font-family: "gill-sans-nova", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .links a:hover {
-  opacity: 0.6;
+  opacity: 0.65;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 36px;
+@media (max-width: 640px) {
+  .site {
+    padding: 32px 20px 48px;
+  }
+
+  .site-header {
+    margin-bottom: 52px;
+  }
+
+  .kicker {
+    margin-bottom: 22px;
+  }
+
+  .text-block {
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .text-block p {
+    font-size: 1.08rem;
+    line-height: 1.42;
+  }
+
+  .links {
+    gap: 14px 20px;
   }
 }
